@@ -21,6 +21,12 @@ sure you rename it to `config.py`.
 ?> mv sample_config.py config.py
 ```
 
+####Getting the code
+To pull the code to your server, run:
+```sh
+?> git clone https://github.com/terrrydactyl/bambot.git /some/directory
+```
+
 ####Installing the python-twitter library
 To install the python-twitter library, run:
 ```sh

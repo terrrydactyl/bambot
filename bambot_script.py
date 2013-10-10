@@ -58,8 +58,8 @@ def had_accident(location, accident_type="pee"):
     c = conn.cursor()
 
     try:
-        c.execute('INSERT INTO all_accidents VALUES ("%s", "%s","%s","%s")' %
-                 (now, location, accident_type, find_streak()))
+        cmd = 'INSERT INTO all_accidents VALUES ("?", "?","?","?")'
+        c.execute(cmd, (now, location, accident_type, find_streak()))
         conn.commit()
     except sqlite3.DatabaseError as e:
         print "Cannot insert data into database."
